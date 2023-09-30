@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Divisible</title>
+</head>
+<body>
+    <script>
+        function isDivisible(n, x, y) {
+        if (n % x === 0 && n % y === 0) {
+            return true;
+        } else {
+            return false;
+        }
+        }
+
+        console.log(isDivisible(3, 3, 4)); // false
+        console.log(isDivisible(12, 3, 4)); // true
+        console.log(isDivisible(8, 3, 4)); // false
+        console.log(isDivisible(48, 3, 4)); // true
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countAndSum(number) {
+            let hasil = 1, nilai = 0;
+            for (let i = 0; i < number; i++) {
+            
+            //    console.log(nilai);
+                if(nilai < 4 ){
+                    nilai += i;
+                } else if ( i = 4){
+                    i = 1;
+                } 
+            //    hasil = hasil + nilai;
+
+                
+            }
+            return nilai;
+
+        }
+
+        console.log(countAndSum(5)); // 9
+        // console.log(countAndSum(10)); // 19
+        // console.log(countAndSum(100)); // 199
+        // console.log(countAndSum(17)); // 33
+        // console.log(countAndSum(19)); // 0
+    </script>
+</body>
+</html>

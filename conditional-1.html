@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional 1</title>
+</head>
+<body>
+    <script>
+       function hollyKnight(name, stamina, undead) {
+            let result;
+            let mengalahkan = stamina - undead;
+            if(mengalahkan < 0 ){
+                result = 'Holly Knight ' + name + ' Mengalahkan ' + undead + ' undead, Namun Sayang Holly Knight ' + name + ' Gugur di medan perang'; 
+            }else  if(mengalahkan == 0 ){
+                result = 'Beruntung Holly knigh ' + name + ' berhasil mengalahkan ' + undead + ' undead!';
+            }else if(mengalahkan > 0){
+                result = 'Holly Knight ' + name + ' memenangkan pertempuran dengan mudah!';
+            }
+
+            return result;
+        }
+
+        console.log(hollyKnight("Lancelot", 30, 20)); // Holly Knight Lancelot memenangkan pertempuran dengan mudah!
+        console.log(hollyKnight("Gallahad", 10, 10)); // Beruntung Holly knight Gallahad berhasil mengalahkan 10 undead!
+        console.log(hollyKnight("Tristan", 100, 110)); // Holly knight Tristan mengalahkan 100 undead, namun sayang holly knight Tristan gugur di medan perang! 
+    </script>
+</body>
+</html>

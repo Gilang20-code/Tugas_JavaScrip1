@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 1</title>
+</head>
+<body>
+    <script>
+        function trasureHunter(dailyLog) {
+            let result;
+            let harta = 0, laut = 10, jurang = 50, sisa, jumlah; 
+            for (let i = 0; i < dailyLog.length; i++) {
+                const element = dailyLog[i];
+                // console.log(element);
+                if(element == '$'){
+                    harta = harta + 100;
+                }else if(element == 'x'){
+                    if(harta <= 10){
+                        harta = 0;
+                    }else{
+                        harta = harta - 10;
+                    }
+                }else if(element == '#'){
+                    if(harta == 0 ){
+                        harta = 0;
+                    }else{
+                        harta = harta - ((harta * 50) / 100);
+                    }
+                }
+            }
+        
+            return harta;
+             
+        }
+
+        console.log(trasureHunter("$x$#x$")); // 185
+        console.log(trasureHunter("$$#x$$")); // 290
+        console.log(trasureHunter("x$#x$#x$")); // 160
+        console.log(trasureHunter("xx$#$#$#$###xx")); // 3.4375
+    </script>
+</body>
+</html>
